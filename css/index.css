@@ -1701,7 +1701,7 @@ body {
   background: var(--efu-background);
   color: var(--efu-fontcolor);
   font-size: 16px;
-  font-family: PingFang SC, Hiragino Sans GB,Microsoft YaHei;
+  font-family: PingFang SC,Hiragino Sans GB,Microsoft YaHei;
   line-height: 2;
   -webkit-tap-highlight-color: transparent;
   margin: 0;
@@ -2057,7 +2057,6 @@ i.solitude {
   align-self: flex-start;
   animation: slide-in 0.6s 0.1s backwards;
   position: relative;
-  order: 2;
 }
 @media screen and (max-width: 768px) {
   .layout > #post,
@@ -2388,11 +2387,11 @@ span.tags-punctuation::before {
 }
 #aside-content {
   width: 300px;
-  order: 1;
+  order: 2;
 }
 @media screen and (min-width: 900px) {
   #aside-content {
-    padding-right: 15px;
+    padding-left: 15px;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -2403,7 +2402,7 @@ span.tags-punctuation::before {
 @media screen and (min-width: 1300px) {
   #aside-content {
     animation: slide-in 0.6s 0.3s backwards;
-    padding-right: 0.5rem;
+    padding-left: 0.5rem;
   }
 }
 #aside-content .item-headline {
@@ -4833,9 +4832,6 @@ span.tags-punctuation {
   outline-style: none;
   width: 100px;
 }
-#recent-posts {
-  order: 2;
-}
 @media screen and (max-width: 768px) {
   #category #recent-posts,
   #tag #recent-posts {
@@ -5330,6 +5326,23 @@ span.tags-punctuation {
 #sidebar #toggle-sidebar {
   bottom: 80px;
 }
+#universe {
+  display: block;
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+[data-theme=light] #universe {
+  display: none;
+}
 #category-bar {
   padding: 0.4rem 0.7rem;
   background: var(--efu-card-bg);
@@ -5430,7 +5443,7 @@ span.tags-punctuation {
   border: initial;
 }
 #home {
-  order: 2;
+  order: 1;
 }
 #category #category-bar {
   padding: 0;
@@ -6740,7 +6753,7 @@ div#banners .bannerText {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("https://7.isyangs.cn/34/65f2e65eae32a-34.png") 50%;
+  background: url("/img/404.webp") 50%;
   background-size: cover;
 }
 .relatedPosts > .relatedPosts-list .content {
